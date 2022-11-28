@@ -33,6 +33,8 @@ internal_page_ids <- georgia_wtm %>%
       bind_rows(last90days)  %>%
       distinct(page_id, .keep_all = T)
 
+# get_targeting(internal_page_ids$page_id[1], timeframe = "LAST_30_DAYS")
+
 ### save seperately
 internal_page_ids %>% #count(cntry, sort  =T) %>%
   # filter(!(page_id %in% already_there)) %>%
