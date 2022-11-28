@@ -45,7 +45,7 @@ internal_page_ids %>% #count(cntry, sort  =T) %>%
 
       print(paste0(.x$page_name,": ", round(which(internal_page_ids$page_id == .x$page_id)/nrow(internal_page_ids)*100, 2)))
 
-      yo <- get_targeting(.x$page_id, timeframe = "LAST_7_DAYS") %>%
+      yo <- get_targeting(.x$page_id, timeframe = "LAST_30_DAYS") %>%
         mutate(tstamp = tstamp)
 
       if(nrow(yo)!=0){
